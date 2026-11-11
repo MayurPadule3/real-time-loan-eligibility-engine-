@@ -53,13 +53,18 @@ public class Customer {
 
     private LocalDateTime updatedAt;
 
+    // Required by JPA
     protected Customer() {
-        // Required by JPA
     }
 
-    public Customer(String firstName, String lastName,
-                    String email, String phoneNumber,
-                    LocalDate dateOfBirth) {
+    // Constructor for creating a complete customer
+    public Customer(
+            String firstName,
+            String lastName,
+            String email,
+            String phoneNumber,
+            LocalDate dateOfBirth
+    ) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -69,13 +74,14 @@ public class Customer {
 
     @PrePersist
     protected void onCreate() {
-        createdAt = LocalDateTime.now();
-        updatedAt = createdAt;
+        LocalDateTime now = LocalDateTime.now();
+        this.createdAt = now;
+        this.updatedAt = now;
     }
 
     @PreUpdate
     protected void onUpdate() {
-        updatedAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
     }
 
     // Getters and setters
