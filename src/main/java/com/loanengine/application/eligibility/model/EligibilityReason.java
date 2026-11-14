@@ -1,0 +1,23 @@
+
+package com.loanengine.application.eligibility.model;
+
+public enum EligibilityReason {
+
+    ELIGIBLE,
+
+    INSUFFICIENT_INCOME,
+
+    HIGH_DEBT_TO_INCOME_RATIO,
+
+    LOW_CREDIT_SCORE,
+
+    HIGH_CREDIT_RISK,
+
+    INSUFFICIENT_CREDIT_HISTORY,
+
+    INSUFFICIENT_CREDIT_DATA,
+
+    EXISTING_FINANCIAL_OBLIGATIONS,
+
+    ADDITIONAL_REVIEW_REQUIRED
+}
