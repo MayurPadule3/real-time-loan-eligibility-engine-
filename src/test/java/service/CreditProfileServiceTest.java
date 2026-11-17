@@ -1,5 +1,6 @@
 
 package com.loanengine.application.service;
+import com.loanengine.application.entity.LoanStatus;
 
 import com.loanengine.application.entity.CreditDataSource;
 import com.loanengine.application.entity.CreditProfile;
